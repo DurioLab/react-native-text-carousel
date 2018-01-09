@@ -1,10 +1,29 @@
 /**
  * 文字跑马灯
  * Author : Arno Ma
+ * Local Link Study : http://blog.csdn.net/u010958922/article/details/52117631
+ * 
+ * 
+ * example: 
+ * 
+    <TextCarousel>
+      <TextCarousel.Item>
+        <View style={{flex:1,justifyContent:'center',paddingLeft:10}}><Text style={{color: '#FFFFFF'}}>广告广告1111111</Text></View>
+      </TextCarousel.Item>
+      <TextCarousel.Item>
+        <View style={{flex:1,justifyContent:'center',paddingLeft:10}}><Text style={{color: '#FFFFFF'}}>广告广告22222222</Text></View>
+      </TextCarousel.Item>
+      <TextCarousel.Item>
+        <View style={{flex:1,justifyContent:'center',paddingLeft:10}}><Text style={{color: '#FFFFFF'}}>广告广告33333333</Text></View>
+      </TextCarousel.Item>
+    </TextCarousel>
+ * 
+ * 
  */
 import React from 'react';
 import PropTypes, { func } from 'prop-types';
 import { StyleSheet, View, Animated, Easing } from 'react-native';
+
 
 
 class TextCarousel extends React.PureComponent {
