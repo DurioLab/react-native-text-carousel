@@ -1,20 +1,18 @@
 /**
  * 文字跑马灯
- * Author : Arno Ma
- * Local Link Study : http://blog.csdn.net/u010958922/article/details/52117631
- * 
+ * Author : Arno Ma 
  * 
  * example: 
  * 
     <TextCarousel>
       <TextCarousel.Item>
-        <View style={{flex:1,justifyContent:'center',paddingLeft:10}}><Text style={{color: '#FFFFFF'}}>广告广告1111111</Text></View>
+        <View><Text>1111111</Text></View>
       </TextCarousel.Item>
       <TextCarousel.Item>
-        <View style={{flex:1,justifyContent:'center',paddingLeft:10}}><Text style={{color: '#FFFFFF'}}>广告广告22222222</Text></View>
+        <View><Text>22222222</Text></View>
       </TextCarousel.Item>
       <TextCarousel.Item>
-        <View style={{flex:1,justifyContent:'center',paddingLeft:10}}><Text style={{color: '#FFFFFF'}}>广告广告33333333</Text></View>
+        <View><Text>33333333</Text></View>
       </TextCarousel.Item>
     </TextCarousel>
  * 
@@ -54,7 +52,7 @@ class TextCarousel extends React.PureComponent {
   }
 
   componentDidMount(){
-    let {duration, height, direction} = this.props;
+    let {interval, height, direction} = this.props;
     let isUp = direction === 'up';
 
     let cloneIndex = isUp ? this.total - 1 : 0;
@@ -81,7 +79,7 @@ class TextCarousel extends React.PureComponent {
 
       });
 
-    }, duration);
+    }, interval);
   }
 
 
@@ -118,13 +116,13 @@ class TextCarousel extends React.PureComponent {
 
 TextCarousel.defaultProps = {
   height: 40,
-  duration: 4000,
+  interval: 4000,
   direction: 'up'
 }
 
 TextCarousel.propTypes = {
   height: PropTypes.number,
-  duration: PropTypes.number,
+  interval: PropTypes.number,
   direction: PropTypes.oneOf(['up','down'])
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "react-native-text-carousel",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "text carousel for react-native",
   "main": "index.js",
   "scripts": {
